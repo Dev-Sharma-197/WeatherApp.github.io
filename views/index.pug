@@ -1,0 +1,34 @@
+doctype html 
+html 
+    head 
+        title Weather App
+        style 
+            include ../public/style.css
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    body 
+
+        h1 
+            if(msg)
+                ms= msg
+
+        form(action="/" method="get" class="form") 
+            input(type="text" class="input" name="input" placeholder="Enter location")
+            button.btn &rarr;
+
+        div.box
+            div.wave.-one
+            div.wave.-two
+            div.wave.-three
+            div#weathercon 
+                | #{tempStatus}
+            div.info
+                h2.location 
+                    i.fas.fa-street-view 
+                    | #{location}, #{country}
+                p#date -- | -- | --
+                h1.temp #{tempval} &deg;C 
+                h3.tempmin_max 
+                    | Min #{tempmin} &deg;C | Max #{tempmax} &deg;C  
+        script(src="../public/script.js") 
