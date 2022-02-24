@@ -8,17 +8,16 @@
 }
 
 body {
-  overflow-y: auto;
-  background-color:rgb(200 205 253);
+  background-color: rgb(200 205 253);
 }
 
-.body::-webkit-scrollbar{
+.body::-webkit-scrollbar {
   width: 0 !important;
 }
 
-
 .container {
-  height: 90vh;
+  min-height: 100vh;
+  overflow-y: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -61,7 +60,6 @@ body {
   /* to kick hardware acceleration for performace */
 }
 
-
 .wave {
   position: absolute;
   top: 70%;
@@ -94,21 +92,20 @@ body {
 }
 
 @keyframes drift {
-    form{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .info {
-  position: relative;
+  position: absolute;
   text-align: center;
-  bottom: 1px;
-  width: 240px;
+  bottom: 58px;
+  width: 250px;
   z-index: 4;
-  margin: 0 10px;
 }
 
 .location {
@@ -117,7 +114,6 @@ body {
 }
 
 .fa-street-view {
-
   margin-right: 15px;
   animation: rotates 3s linear infinite alternate;
 }
@@ -153,7 +149,7 @@ body {
 }
 
 #weathercon {
-  height: 55%;
+  height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
