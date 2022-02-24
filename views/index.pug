@@ -5,8 +5,7 @@ html
         style 
             include ../public/style.css
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <script src="https://kit.fontawesome.com/f7148541f3.js" crossorigin="anonymous"></script>
     body 
 
         h1 
@@ -28,7 +27,7 @@ html
                     i.fas.fa-street-view 
                     | #{location}, #{country}
                 p#date -- | -- | --
-                h1.temp #{tempval} &deg;C 
+                h1.temp #{tempval}&deg;C 
                 h3.tempmin_max 
                     | Min #{tempmin} &deg;C | Max #{tempmax} &deg;C  
         script(src="../public/script.js") 

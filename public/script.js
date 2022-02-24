@@ -5,6 +5,8 @@ var weathercon = document.getElementById("weathercon");
 // Getting weather Status
 const tempStatus = weathercon.innerHTML;
 
+console.log(tempStatus);
+
 // Conditioning Weather situations and icons
 if (tempStatus == " Clear") {
   weathercon.innerHTML = '<i class="fas fa-sun" style= "color: #eccc68"></i>';
@@ -12,12 +14,14 @@ if (tempStatus == " Clear") {
   weathercon.innerHTML = '<i class="fas fa-cloud" style= "color: #dfe4ea"></i>';
 } else if (tempStatus == " Rain") {
   weathercon.innerHTML =
-    '<i class="fas fa-cloud-rain" style= "color: #dfe4ea"></i>';
+    '<i class="fas fa-cloud-rain" style= "color: #898989"></i>';
 } else if (tempStatus == " Snow") {
   weathercon.innerHTML = '<i class="fas fa-snowman" style= "color: #fff"></i>';
 } else if (tempStatus == " Thunderstorm") {
   weathercon.innerHTML =
     ' <i class="fas fa-cloud" style= "color: #5e6364"></i> <i class="fa fa-bolt" style= "color: #dfd12b"></i>';
+} else if (tempStatus == " Mist") {
+  weathercon.innerHTML = '<i class="fas fa-smog" style= "color: #5e6364"></i>';
 } else {
   weathercon.innerHTML = "------";
 }
