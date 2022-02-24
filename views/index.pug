@@ -10,25 +10,29 @@ html
     body 
 
         h1 
+        div.container
             if(msg)
                 ms= msg
+            form(action="/" method="get" class="form") 
+                input(type="text" class="input" name="input" placeholder="Enter location")
+                button.btn &rarr;
 
-        form(action="/" method="get" class="form") 
-            input(type="text" class="input" name="input" placeholder="Enter location")
-            button.btn &rarr;
+            div.box
+                div.wave.-one
+                div.wave.-two
+                div.wave.-three
 
-        div.box
-            div.wave.-one
-            div.wave.-two
-            div.wave.-three
-            div#weathercon 
-                | #{tempStatus}
-            div.info
-                h2.location 
-                    i.fas.fa-street-view 
-                    | #{location}, #{country}
-                p#date -- | -- | --
-                h1.temp #{tempval}&deg;C 
-                h3.tempmin_max 
-                    | Min #{tempmin} &deg;C | Max #{tempmax} &deg;C  
+                div#weathercon 
+                    | #{tempStatus}
+
+                div.info
+                    h2.location 
+                        i.fas.fa-street-view 
+                        | #{location}, #{country}
+
+                    p#date -- | -- | --
+                    h1.temp #{tempval}&deg;C 
+                    h3.tempmin_max 
+                        | Min #{tempmin} &deg;C | Max #{tempmax} &deg;C 
+
         script(src="../public/script.js") 
