@@ -53,16 +53,14 @@ html {
 }
 
 .box {
-  width: 20vw;
-  height: 70vh;
+  width: 300px;
+  height: 500px;
   border-radius: 50rem;
   box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
   background: #a5bbdd;
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
-  min-width: 30rem;
-  min-height: 35rem;
 }
 
 .wave {
