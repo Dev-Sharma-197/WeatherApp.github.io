@@ -33,7 +33,9 @@ html
                         i.fas.fa-street-view 
                         | #{location}, #{country}
 
-                    p#date -- | -- | --
+                    p#date 
+                        | #{tzone}
+
                     h1.temp #{tempval}&deg;C 
                     h3.tempmin_max 
                         | Min #{tempmin} &deg;C | Max #{tempmax} &deg;C 

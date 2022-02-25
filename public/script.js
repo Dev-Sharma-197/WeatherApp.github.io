@@ -5,6 +5,9 @@ var weathercon = document.getElementById("weathercon");
 // Getting weather Status
 const tempStatus = weathercon.innerHTML;
 
+// Getting other countries time
+const apiZone = curDate.innerHTML;
+
 console.log(tempStatus);
 
 // Conditioning Weather situations and icons
@@ -26,6 +29,11 @@ if (tempStatus == " Clear") {
   weathercon.innerHTML = "------";
 }
 
+// Getting searched location time
+var b = new Date();
+var utc = b.getTime() + b.getTimezoneOffset() * 60000;
+const nUtc = utc + 1000 * apiZone;
+
 // Getting current day and displaying with user-defined function
 const getCurrentDay = () => {
   var weekday = new Array(7);
@@ -37,7 +45,7 @@ const getCurrentDay = () => {
   weekday[5] = "Friday";
   weekday[6] = "Saturday";
 
-  let currentTime = new Date();
+  let currentTime = new Date(nUtc);
   let day = weekday[currentTime.getDay()];
   return day;
 };
@@ -59,7 +67,7 @@ const getCurrentTime = () => {
     "Dec",
   ];
 
-  var now = new Date();
+  var now = new Date(nUtc);
   var month = months[now.getMonth()];
   var date = now.getDate();
   let hours = now.getHours();
@@ -76,6 +84,6 @@ const getCurrentTime = () => {
 };
 
 // Displaying date, time and day
-curDate.childNodes[0].nodeValue = ` ${getCurrentDay()} | ${getCurrentTime()} `;
+curDate.childNodes[0].nodeValue = ` ${getCurrentDay()} | ${getCurrentTime()}`;
 
 console.log("js file is running");

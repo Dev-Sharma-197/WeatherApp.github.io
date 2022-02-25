@@ -4,7 +4,7 @@ const path = require("path");
 const requests = require("requests");
 
 // Generating Dynamic port
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8000;
 
 // Creating app
 const app = express();
@@ -44,6 +44,7 @@ app.get("/", (req, res) => {
           tempmin: apiData[0].main.temp_min,
           tempmax: apiData[0].main.temp_max,
           tempStatus: apiData[0].weather[0].main,
+          tzone: apiData[0].timezone,
         });
       } catch (error) {
         // Handling error
